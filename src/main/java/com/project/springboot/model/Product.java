@@ -13,9 +13,15 @@ public class Product {
     
     private String name;
 
+    
     // Constructors, Getters, and Setters
     public Product() {}
-
+    
+    public Product(Long id, String name) {
+    	this.id = id;
+    	this.name = name;
+    }
+    
     public Product(String name) {
         this.name = name;
     }
