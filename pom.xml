@@ -64,6 +64,18 @@
 		  <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 		  <version>2.2.0</version>
 		</dependency>
+		<!-- Jacoco Maven Plugin -->
+		<dependency>
+		  <groupId>org.jacoco</groupId>
+		  <artifactId>jacoco-maven-plugin</artifactId>
+		  <version>0.8.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+		<dependency>
+		    <groupId>org.sonarsource.scanner.maven</groupId>
+		    <artifactId>sonar-maven-plugin</artifactId>
+		    <version>3.10.0.2594</version>
+		</dependency>
 	</dependencies>
 	
     <distributionManagement>
@@ -100,28 +112,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Sonarqube plugin -->
-			<plugin>
-	          <groupId>org.jacoco</groupId>
-	          <artifactId>jacoco-maven-plugin</artifactId>
-	          <configuration>
-	              <append>true</append>
-	          </configuration>
-	          <executions>
-	              <execution>
-	                  <goals>
-	                      <goal>prepare-agent</goal>
-	                  </goals>
-	              </execution>
-	              <execution>
-	                  <id>post-unit-test</id>
-	                  <phase>test</phase>
-	                  <goals>
-	                      <goal>report</goal>
-	                  </goals>
-	              </execution>
-	          </executions>
-	      </plugin>
 		</plugins>
 	</build>
 
