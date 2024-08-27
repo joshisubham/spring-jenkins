@@ -1,4 +1,4 @@
-package com.project.test.springboot.controllers;
+package com.project.springboot.controllers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -10,7 +10,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.project.springboot.controllers.ProductController;
 import com.project.springboot.model.Product;
 import com.project.springboot.repository.ProductRepository;
 

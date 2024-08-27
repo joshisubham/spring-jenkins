@@ -1,4 +1,4 @@
-package com.project.test.springboot;
+package com.project.springboot;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
