@@ -1,5 +1,7 @@
 package com.project.springboot;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -10,4 +12,8 @@ class SpringJenkinsApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test
+	void add() {
+		assertEquals(5, 2+3);
+	}
 }
