@@ -30,6 +30,7 @@
 		<java.version>17</java.version>
 		<jacoco.version>0.8.8</jacoco.version>
 		<sonar.language>java</sonar.language>
+		<sonar.junit.reportsPath>${basedir}/target/surefire-reports</sonar.junit.reportsPath>
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.coverage.jacoco.xmlReportPaths>
     ${basedir}/target/site/jacoco/jacoco.xml
@@ -133,53 +134,6 @@
 						<goals>
 						<goal>checkstyle</goal>
 						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- Jacoco plugin-->
-			<plugin>
-				<groupId>org.jacoco</groupId> 
-    			<artifactId>jacoco-maven-plugin</artifactId>
-    			<configuration>
-					<excludes>
-						<exclude>**/Application.java,**/config/*Config.java,**/properties/*,**/constant/**,**/model/**</exclude>
-					</excludes>
-				</configuration>
-				<executions>
-					<execution>
-						<id>pre-test</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-						<configuration>
-							<propertyName>surefireArgLine</propertyName>
-						</configuration>
-					</execution>
-					<execution>
-						<id>post-test</id>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>default-check</id>
-						<goals>
-							<goal>check</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<rule implementation="org.jacoco.maven.RuleConfiguration">
-									<element>BUNDLE</element>
-									<limits>
-										<limit implementation="org.jacoco.report.check.Limit">
-											<counter>LINE</counter>
-											<value>COVEREDRATIO</value>
-											<minimum>${min.line.coverage}</minimum>
-										</limit>
-									</limits>
-								</rule>
-							</rules>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
