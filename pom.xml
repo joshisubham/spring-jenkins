@@ -97,13 +97,8 @@
         <repository>
             <id>nexus-snapshots</id>
 			<name>snapshot nexus</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://localhost:8081/repository/spring-jenkins-repo/</url>
         </repository>
-        <snapshotRepository>
-            <id>nexus-releases</id>
-			<name>release nexus</name>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
     </distributionManagement>
 
 	<build>
