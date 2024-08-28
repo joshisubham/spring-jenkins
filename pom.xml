@@ -31,9 +31,11 @@
 		<jacoco.version>0.8.8</jacoco.version>
 		<sonar.language>java</sonar.language>
 	  	<min.line.coverage>0.80</min.line.coverage>
+	  	<sonar.tests>src/test/</sonar.tests>
+	  	<sonar.java.binaries>target/classes</sonar.java.binaries>
 	    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 	    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-	    <sonar.jacoco.reportPath>target/jacoco.exec</sonar.jacoco.reportPath>
+	    <sonar.coverage.jacoco.xmlReportPath>target/jacoco.exec</sonar.coverage.jacoco.xmlReportPath>
 	    <sonar.exclusions>**/SpringJenkinsApplication.java,**/*Config.java,**/properties/*</sonar.exclusions>
 	</properties>
 	<dependencies>
@@ -176,6 +178,11 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+			    <groupId>org.sonarsource.scanner.maven</groupId>
+			    <artifactId>sonar-maven-plugin</artifactId>
+			    <version>3.10.0.2594</version>
 			</plugin>
 		</plugins>
 	</build>
