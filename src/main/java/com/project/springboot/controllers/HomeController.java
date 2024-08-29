@@ -13,6 +13,7 @@ public class HomeController {
 	
 	@RequestMapping(method=RequestMethod.GET, value="/home")
 	public String home() {
+		LOG.info("At Home");
 		return "At Home";
 	}
 	
