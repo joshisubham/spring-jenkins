@@ -1,0 +1,129 @@
+2024-08-29 15:16:27 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.project.springboot.SpringJenkinsApplicationTests]: SpringJenkinsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-29 15:16:27 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.project.springboot.SpringJenkinsApplication for test class com.project.springboot.SpringJenkinsApplicationTests
+2024-08-29 15:16:27 [main] INFO  c.p.s.SpringJenkinsApplicationTests - Starting SpringJenkinsApplicationTests using Java 17.0.11 with PID 3900 (started by subhamjoshi in /Users/subhamjoshi/Documents/DevOps/spring-jenkins)
+2024-08-29 15:16:27 [main] INFO  c.p.s.SpringJenkinsApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-29 15:16:27 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@14f060b8
+2024-08-29 15:16:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-29 15:16:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-29 15:16:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.project.springboot.repository.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-08-29 15:16:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JDBC repository interfaces.
+2024-08-29 15:16:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-29 15:16:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29 15:16:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
+2024-08-29 15:16:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-29 15:16:28 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-08-29 15:16:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-29 15:16:28 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29 15:16:28 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-29 15:16:28 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-29 15:16:28 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29 15:16:28 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-29 15:16:29 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29 15:16:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29 15:16:29 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-29 15:16:30 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-08-29 15:16:30 [main] INFO  c.p.s.SpringJenkinsApplicationTests - Started SpringJenkinsApplicationTests in 2.99 seconds (process running for 3.952)
+2024-08-29 15:16:30 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.project.springboot.controllers.HomeControllerTest]: HomeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-29 15:16:30 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.project.springboot.SpringJenkinsApplication for test class com.project.springboot.controllers.HomeControllerTest
+2024-08-29 15:16:30 [main] INFO  c.p.s.controllers.HomeControllerTest - Starting HomeControllerTest using Java 17.0.11 with PID 3900 (started by subhamjoshi in /Users/subhamjoshi/Documents/DevOps/spring-jenkins)
+2024-08-29 15:16:30 [main] DEBUG c.p.s.controllers.HomeControllerTest - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-08-29 15:16:30 [main] INFO  c.p.s.controllers.HomeControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-08-29 15:16:30 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@491ef938
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-29 15:16:30 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-29 15:16:30 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-29 15:16:30 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-08-29 15:16:30 [main] INFO  c.p.s.controllers.HomeControllerTest - Started HomeControllerTest in 0.099 seconds (process running for 4.509)
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.project.springboot.controllers.HomeController#home()
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-08-29 15:16:30 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["At Home"]
+2024-08-29 15:16:30 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.project.springboot.controllers.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-29 15:16:30 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.project.springboot.SpringJenkinsApplication for test class com.project.springboot.controllers.ProductControllerTest
+2024-08-29 15:16:30 [main] INFO  c.p.s.c.ProductControllerTest - Starting ProductControllerTest using Java 17.0.11 with PID 3900 (started by subhamjoshi in /Users/subhamjoshi/Documents/DevOps/spring-jenkins)
+2024-08-29 15:16:30 [main] DEBUG c.p.s.c.ProductControllerTest - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-08-29 15:16:30 [main] INFO  c.p.s.c.ProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-08-29 15:16:30 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5bd3ef5c
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 6 mappings in 'requestMappingHandlerMapping'
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-29 15:16:31 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-29 15:16:31 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-29 15:16:31 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-08-29 15:16:31 [main] INFO  c.p.s.c.ProductControllerTest - Started ProductControllerTest in 0.172 seconds (process running for 4.735)
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.project.springboot.controllers.ProductController#deleteProduct(Long)
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.project.springboot.controllers.ProductController#getProductById(Long)
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.project.springboot.controllers.ProductController#getProductById(Long)
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Product [id=1, name=Product 1]]
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.project.springboot.controllers.ProductController#getAllProducts()
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Product [id=1, name=Product 1], Product [id=2, name=Product 2]]]
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.project.springboot.controllers.ProductController#deleteProduct(Long)
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-08-29 15:16:31 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2024-08-29 15:16:31 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@14f060b8, started on Thu Aug 29 15:16:27 IST 2024
+2024-08-29 15:16:31 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29 15:16:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-29 15:16:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-29 15:16:31 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@491ef938, started on Thu Aug 29 15:16:30 IST 2024
+2024-08-29 15:16:31 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@5bd3ef5c, started on Thu Aug 29 15:16:30 IST 2024
+2024-08-29 15:16:37 [main] INFO  c.p.s.SpringJenkinsApplication - Starting SpringJenkinsApplication using Java 17.0.11 with PID 3961 (/Users/subhamjoshi/Documents/DevOps/spring-jenkins/target/classes started by subhamjoshi in /Users/subhamjoshi/Documents/DevOps/spring-jenkins)
+2024-08-29 15:16:37 [main] INFO  c.p.s.SpringJenkinsApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-29 15:16:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-29 15:16:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-29 15:16:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.project.springboot.repository.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-08-29 15:16:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2024-08-29 15:16:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-29 15:16:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29 15:16:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
+2024-08-29 15:16:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2024-08-29 15:16:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-29 15:16:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-29 15:16:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-08-29 15:16:37 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-29 15:16:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 491 ms
+2024-08-29 15:16:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-29 15:16:37 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-08-29 15:16:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-29 15:16:37 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-08-29 15:16:37 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29 15:16:37 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-29 15:16:37 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-29 15:16:37 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29 15:16:37 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-29 15:16:38 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29 15:16:38 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29 15:16:38 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29 15:16:38 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2024-08-29 15:16:38 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-08-29 15:16:38 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-29 15:16:38 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-29 15:16:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2024-08-29 15:16:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2024-08-29 15:16:38 [main] INFO  c.p.s.SpringJenkinsApplication - Started SpringJenkinsApplication in 1.551 seconds (process running for 1.74)
+2024-08-29 15:16:53 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29 15:16:53 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4197e859
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5b4b6f3b
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-08-29 15:16:53 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/home", parameters={}
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.project.springboot.controllers.HomeController#home()
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["At Home"]
+2024-08-29 15:16:53 [http-nio-8000-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
