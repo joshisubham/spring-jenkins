@@ -9,13 +9,14 @@ services:
     environment:
       - SPRING_ZIPKIN_BASE_URL=http://zipkin:9411
       - SPRING_SLEUTH_SAMPLER_PROBABILITY=1.0
+      - SPRING_APPLICATION_NAME=spring-jenkins
     depends_on:
       - zipkin
     networks:
       - trace-network
 
   zipkin:
-    image: openzipkin/zipkin:2.23
+    image: openzipkin/zipkin:latest
     container_name: zipkin
     ports:
       - "9411:9411"

@@ -1,32 +1,36 @@
 <configuration>
-	<logger name="org.springframework" level="INFO" />
-	<logger name="org.apache.http" level="INFO" />
-	<logger name="org.apache.http.wire" level="INFO" />
-	<logger name="com.project.springboot.controllers" level="DEBUG" />
-	<!-- Console Appender -->
-	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- Logger configurations -->
+    <logger name="org.springframework" level="INFO" />
+    <logger name="org.apache.http" level="INFO" />
+    <logger name="org.apache.http.wire" level="INFO" />
+    <logger name="com.project.springboot.controllers" level="DEBUG" />
+    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+	<property name="APP_NAME" value="${springAppName}" />
+	
+    <!-- Console Appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} app=${APP_NAME} CorrelationId=%X{correlationId:-} TraceId=%X{traceId:-} SpanId=%X{spanId:-} %msg%n</pattern>
         </encoder>
     </appender>
-	
-    
-	
-	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-       <!--- <file>logs/myApp.log</file> For single file-->
+
+    <!-- Rolling File Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-        	<pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} app=${APP_NAME} CorrelationId=%X{correlationId:-} TraceId=%X{traceId:-} SpanId=%X{spanId:-} %msg%n</pattern>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>logs/spring-jenkins.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>30</maxHistory> <!--Days of Log files-->
+            <maxHistory>30</maxHistory> <!-- Days of Log files -->
             <timeBasedFileNamingAndTriggerPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-            	<maxFileSize>1KB</maxFileSize>
+                <maxFileSize>1KB</maxFileSize>
             </timeBasedFileNamingAndTriggerPolicy>
         </rollingPolicy>
     </appender>
-	<root level="INFO">
-		<appender-ref ref="STDOUT" />
-		<appender-ref ref="FILE" />
-	</root>
+
+    <!-- Root Logger -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
 </configuration>
