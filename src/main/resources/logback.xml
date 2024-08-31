@@ -37,19 +37,13 @@
 <!--            </timeBasedFileNamingAndTriggerPolicy>-->
         </rollingPolicy>
     </appender>
-
-    <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <param name="Encoding" value="UTF-8"/>
-        <remoteHost>http</remoteHost>
-        <remoteHost>localhost</remoteHost>
-        <port>4560</port>
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>localhost:4560</destination>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder"/>
     </appender>
-
-
     <root level="INFO">
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="FILE" />
-        <appender-ref ref="logstash"/>
+        <appender-ref ref="LOGSTASH"/>
 	</root>
 </configuration>
