@@ -1,12 +1,22 @@
-<configuration>
+<configuration scan="true">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
     <!-- Logger configurations -->
     <logger name="org.springframework" level="INFO" />
     <logger name="org.apache.http" level="INFO" />
     <logger name="org.apache.http.wire" level="INFO" />
     <logger name="com.project.springboot.controllers" level="DEBUG" />
+
     <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+    <springProperty scope="context" name="logstash_host" source="logstash.host"/>
+    <springProperty scope="context" name="logstash_port" source="logstash.port"/>
+
 	<property name="APP_NAME" value="${springAppName}" />
-	
+    <property name="LHOST" value="${logstash_host}" />
+    <property name="LPORT" value="${logstash_port}" />
+
     <!-- Console Appender -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -22,15 +32,24 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>logs/spring-jenkins.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory> <!-- Days of Log files -->
-            <timeBasedFileNamingAndTriggerPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>1KB</maxFileSize>
-            </timeBasedFileNamingAndTriggerPolicy>
+<!--            <timeBasedFileNamingAndTriggerPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+<!--                <maxFileSize>1KB</maxFileSize>-->
+<!--            </timeBasedFileNamingAndTriggerPolicy>-->
         </rollingPolicy>
     </appender>
 
-    <!-- Root Logger -->
+    <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <remoteHost>http</remoteHost>
+        <remoteHost>localhost</remoteHost>
+        <port>4560</port>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>
+
+
     <root level="INFO">
-        <appender-ref ref="STDOUT" />
-        <appender-ref ref="FILE" />
-    </root>
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+        <appender-ref ref="logstash"/>
+	</root>
 </configuration>
