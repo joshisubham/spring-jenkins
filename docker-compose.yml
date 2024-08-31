@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   zipkin:
     image: openzipkin/zipkin:latest
@@ -9,12 +10,11 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.5.1
     container_name: elasticsearch
     environment:
-      - "cluster.name=elasticsearch" #设置集群名称为elasticsearch
-      - "discovery.type=single-node" #以单一节点模式启动
+      - "cluster.name=elasticsearch"
+      - "discovery.type=single-node"
       - xpack.security.enabled=false
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m" #设置使用jvm内存大小
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     volumes:
-    #  - /mydata/elasticsearch/plugins:/usr/share/elasticsearch/plugins #插件文件挂载
       - elasticsearch_data:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
@@ -22,19 +22,18 @@ services:
     image: docker.elastic.co/kibana/kibana:8.5.1
     container_name: kibana
     depends_on:
-      - elasticsearch #kibana在elasticsearch启动之后再启动
+      - elasticsearch
     environment:
-      - "elasticsearch.hosts=http://localhost:9200" #设置访问elasticsearch的地址
+      - "elasticsearch.hosts=http://localhost:9200"
     ports:
       - 5601:5601
   logstash:
     image: docker.elastic.co/logstash/logstash:8.5.1
     container_name: logstash
     volumes:
-      - ./pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf #挂载logstash的配置文件
+      - ./pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     depends_on:
-      - elasticsearch #kibana在elasticsearch启动之后再启动
-
+      - elasticsearch
     ports:
       - 4560:4560
 
