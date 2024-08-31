@@ -2,9 +2,5 @@ spring:
   application:
     name: spring-jenkins
 
-# Logstash appender
-# logstash:
-#  destination: http://localhost:5000
-
 logstash:
   host: localhost
