@@ -11,3 +11,18 @@ Zipkin-export = By default it is false. If it is true, logs will be exported to 
 Trace: A Trace is a view into a request as it moves through a distributed system. It uniquely identifies a single request as it flows through a distributed system.
 
 Span: A span is a named, timed operation that represents a part of the workflow. It uniquely identifies a single operation or unit of work within a trace.
+
+
+***For starting elk***
+
+`docker-compose build`
+
+`docker-compose up`
+
+if changed anything in docker-compose.yml file
+
+`docker-compose up --build`
+
+***To delete docker images***
+
+`docker rmi $(docker images -q) --force`

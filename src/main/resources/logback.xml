@@ -39,7 +39,48 @@
     </appender>
     <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
         <destination>localhost:4560</destination>
-        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder"/>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <!-- Timestamp of the log entry -->
+                <timestamp>
+                    <timeZone>UTC</timeZone>
+                </timestamp>
+                <!-- MDC (Mapped Diagnostic Context) data -->
+                <mdc/>
+                <!-- Logback's context -->
+                <context/>
+                <!-- Logstash JSON format version -->
+                <version/>
+                <!-- Log level of the log entry -->
+                <logLevel/>
+                <!-- Logger name of the log entry -->
+                <loggerName/>
+                <!-- Custom pattern for log output -->
+                <pattern>
+                    <pattern>
+                        {
+                        "timestamp": "%d{yyyy-MM-dd'T'HH:mm:ss.SSS'Z'}",
+                        "thread": "%thread",
+                        "level": "%level",
+                        "logger": "%logger{36}",
+                        "app": "${APP_NAME}",
+                        "traceId": "%X{traceId:-}",
+                        "spanId": "%X{spanId:-}",
+                        "pid": "${PID:-}",
+                        "message": "%message",
+                        "stackTrace": "%ex"
+                        }
+                    </pattern>
+                </pattern>
+                <!-- Additional log information -->
+                <threadName/>
+                <message/>
+                <logstashMarkers/>
+                <arguments/>
+                <stackTrace/>
+            </providers>
+        </encoder>
+<!--        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder"/>-->
     </appender>
     <root level="INFO">
 		<appender-ref ref="STDOUT" />
